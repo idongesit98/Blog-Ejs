@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/css/sign.css">
+</head>
+<body>
+   <section class="signup-container">
+        <form action="/sign-up" method="post" class="signup-form">
+            <h1>Create Your Account</h1> 
+            <p>Join us and start managing your tasks efficiently!</p>
+
+            <div class="form-group">
+                <label for="first_name">first_name</label>
+                <input type="text" id="first_name" name="first_name" placeholder="Enter your firstname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last_name">last_name</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Enter your lastname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone_number">Phone Number</label>
+                <input type="text" id="phone_number" name="phone_number" placeholder="Enter your phone number" required>
+            </div>
+
+            <button type="submit" class="btn submit-btn">Sign Up</button>
+            <p class="login-link">Already have an account? <a href="/login">Login here</a>.</p>
+        </form>
+   </section>
+</body>
+</html>

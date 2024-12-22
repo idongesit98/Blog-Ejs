@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Posts</title>
+    <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+    <section class="form-section">
+        <h2>Add a New Post</h2>
+        <form action="/blog/create" method="POST">
+          <input type="text" name="title" placeholder="Title" required/>
+          <input type="text" name="description" placeholder="Description" required/>
+          <input type="text" name="body" placeholder="Body" required/>
+          <label for="tags">Tags:</label>
+          <select name="tags" id="tags" required>
+            <option value="" disabled selected>Select a tag</option>
+            <option value="food">Food</option>
+            <option value="medicine">Medicine</option>
+            <option value="science">Science</option>
+            <option value="article">Article</option>
+          </select>
+          <input type="text" name="author" placeholder="Author" required/>
+          <input type="text" name="state" placeholder="State" required/>
+          <button type="submit">Add</button>
+        </form>
+      </section>   
+      <a href="/blog">Back to all posts</a> 
+</body>
+</html>

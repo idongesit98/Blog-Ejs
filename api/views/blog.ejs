@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks</title>
+    <link rel="stylesheet" href="/css/redo.css">
+  </head>
+  <body>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+          if (params.has('deleted')) {
+              alert('Post deleted successfully')
+              window.history.replaceState({},document.title, window.location.pathname)
+          }
+    </script>
+
+    <section class="">
+      <header>
+        <h1>Welcome to Your Blog</h1>
+      </header>
+      <div class="create"><a href="/blog/create">Add a new Post</a></div>
+
+      <section class="post-section">
+        <% if (blogs && blogs.length > 0) { %>
+          <div class="post-list">
+            <% blogs.forEach(blog => { %>
+              <div class="post-item">
+                <!-- Post link on the left -->
+                <a href="/blog/<%= blog._id %>" class="post-link"><%= blog.title %></a>
+      
+                <!-- Action buttons on the right -->
+                <div class="post-actions">
+                  <a href="/blog/update-post/<%= blog._id %>" class="btn edit-btn">Edit</a>
+                  <form action="/blog/delete-post/<%= blog._id %>" method="post" class="action-form">
+                    <button type="submit" class="btn delete-btn">Delete</button>
+                  </form>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+        <% } else { %>
+          <p>No posts available.</p>
+        <% } %>
+      </section>
+      
+
+      <section class="section">
+        <h2 class="section-title">Posts</h2>
+        <% if (blogs && blogs.length > 0) { %>
+            <div class="posts-list">
+                <% blogs.forEach(b => { %>
+                    <div class="post-card">
+                        <h3 class="post-title"><%= b.title %></h3>
+                        <p class="post-meta"><strong>Author:</strong> <%= b.author %></p>
+                        <p class="post-meta"><strong>Description:</strong> <%= b.description %></p>
+                        <p class="post-meta"><strong>Tags:</strong> <% if (Array.isArray(b.tags)) { %>
+                          <%= b.tags.join(', ') %>
+                      <% } else { %>
+                          <%= b.tags %> <!-- If not an array, show as is -->
+                      <% } %> </p>
+                        <p class="post-body"><%= b.body %></p>
+                        <p class="post-meta"><strong>State:</strong> <%= b.state %></p>
+                        <p class="post-date"><small>Created on: <%= b.created_at %></small></p>
+                    </div>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <p>No posts available.</p>
+        <% } %>
+    </section>
+
+  </body>
+
+</html>

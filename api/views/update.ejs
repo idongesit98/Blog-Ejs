@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Post</title>
+    <link rel="stylesheet" href="/css/edit.css">
+</head>
+<body>
+  <section class="edit-post-section">
+    <header class="edit-header">
+      <h1>Edit Post</h1>
+    </header>
+
+    <form action="/blog/update-post/<%= blogs._id %>/" method="POST" class="edit-form">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="<%= blogs.title %>" required>
+      </div>
+
+      <div class="form-group">
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" rows="5" required><%= blogs.content %></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" value="<%= blogs.author %>" required>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State:</label>
+        <select id="state" name="state">
+          <option value="draft" <%= blogs.state === 'draft' ? 'selected' : '' %>>Draft</option>
+          <option value="published" <%= blogs.state === 'published' ? 'selected' : '' %>>Published</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn submit-btn">Update Post</button>
+    </form>
+
+    <a href="/" class="btn back-btn">Back to all posts</a>
+  </section>
+  
+  </section>  
+</body>
+</html>
+
+<!-- <section class="form-section">
+        <h2>Add a New Task</h2>
+        <form action="/tasks/create" method="POST">
+          <input type="text" name="title" placeholder="Title" required/>
+          <input type="text" name="description" placeholder="Description" required/>
+          <button type="submit">Add</button>
+        </form>
+      </section> -->

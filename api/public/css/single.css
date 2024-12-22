@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Section */
+.post-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.post-header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post-title {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #007bff;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+/* Article */
+.post-body {
+    padding: 1rem 0;
+}
+
+.post-description,
+.post-tags,
+.post-content {
+    margin: 1rem 0;
+}
+
+.post-tags {
+    color: #555;
+}
+
+/* Footer */
+.post-footer {
+    text-align: center;
+    border-top: 2px solid #ddd;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.post-state {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .post-section {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .post-title {
+        font-size: 1.5rem;
+    }
+
+    .back-btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

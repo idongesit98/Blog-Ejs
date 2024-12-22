@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Blogss!!!!</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="login-header">
+        <h1> Welcome to Todo!!!!<br>Login to view your tasks or SignUp to Create One </h1>
+        <div class="buttons">
+            <button type="button" class="btn" id="login-btn">Login</button>
+            <button type="button" class="btn"><a href="/sign-up">SignUp</a></button>
+        </div>
+    </header>
+
+    
+    <!-- Login Dialog -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form" action="/login" method="post">
+                <div class="form-group">
+                    <label for="email">Enter your email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

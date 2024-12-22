@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #394047;
+    color: #333;
+  }
+
+  .create{
+    text-align: right;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  header {
+    background-color: #74777a;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  /* Links */
+  a {
+    color: #eff1f3;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Post List Section */
+  .post-section {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .post-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.8rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-link {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .post-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-btn {
+    background-color: #f0ad4e;
+  }
+  
+  .edit-btn:hover {
+    background-color: #ec971f;
+  }
+  
+  .publish-btn {
+    background-color: #5bc0de;
+  }
+  
+  .publish-btn:hover {
+    background-color: #31b0d5;
+  }
+  
+  .delete-btn {
+    background-color: #d9534f;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c9302c;
+  }
+  
+  /* Posts Section */
+  .section {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #e9f1fa;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+  }
+  
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-title {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+  }
+  
+  .post-body {
+    margin: 0.5rem 0;
+    color: #444;
+  }
+  
+  .post-date {
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .post-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .post-actions {
+      margin-top: 0.5rem;
+      justify-content: flex-start;
+    }
+  }
+  
