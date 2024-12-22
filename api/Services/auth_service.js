@@ -30,8 +30,8 @@ const Login = async({email,password}) => {
         }
 
         const token = await jwt.sign({email}, process.env.JWT_SECRET, {expiresIn: '1h'})
-        console.log('Token generated: ', token)
-        console.log('JWT Secret:', process.env.JWT_SECRET);
+        // console.log('Token generated: ', token)
+        // console.log('JWT Secret:', process.env.JWT_SECRET);
         return {
             code:200,
             success:true,

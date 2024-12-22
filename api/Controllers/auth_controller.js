@@ -25,9 +25,6 @@ const login = async(req,res) =>{
 
     if(loginResponse.success){
         res.cookie('jwt', loginResponse.data.token, {httpOnly:true, secure:false})
-        console.log('JWT token set:', loginResponse.data.token);
-        console.log('User logged in:', loginResponse.data.user.email);
-        
         return res.redirect('/blog')
     }    
     res.status(loginResponse.code).render('login',{message: loginResponse.message}) // changed json to render
