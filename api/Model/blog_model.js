@@ -38,11 +38,12 @@ const BlogSchema = mongoose.Schema(
         role:{
             type:String,
             default:'user'
-        }
-    },{
-        timestamps:{
-            created_at:'created_at',
-            updated_at:'updated_at'
+        },
+        created_at:{
+            type:Date
+        },
+        updated_at:{
+            type:Date
         }
     }
 );

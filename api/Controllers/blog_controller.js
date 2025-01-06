@@ -1,5 +1,5 @@
 const BlogService = require("../Services/blog_services")
-const dayJs = require('dayjs')
+
 const CreatePost = async (req,res) => {
     const payload = req.body;
     const user = req.user;
@@ -37,7 +37,6 @@ const GetPost = async (req,res) => {
             const blog = serviceResponse.data.post; // Updated variable
             return res.status(serviceResponse.code).render('single', {
                 blogs: blog,
-                created_at: dayJs(blog.created_at).format('MMMM DD, YYYY h:mm A')
             });
         } else {
             return res.status(404).render('error', { message: 'Post not found' });
@@ -86,12 +85,11 @@ const GetAllPost = async (req,res) => {
             page,perPage,user,state,author,title,tags,sortOrder,sortBy
         });
         
-        const blogs = serviceResponse.data.posts || [];
+        const blogs = serviceResponse?.data?.posts || [];
 
-        return res.status(serviceResponse.code).render('blog',{
+        return res.status(serviceResponse?.code || 200).render('blog',{
             blogs:blogs,
             user:req.user,
-            created_at: dayJs(blogs.created_at).format('MMMM DD, YYYY h:mm A')
         })
         
 
